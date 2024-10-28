@@ -1,11 +1,23 @@
-public class App{
+import java.util.LinkedList;
+
+public class App
+{
     public static void main(String[] args) {
-        System.out.println("Hello"); //printline (determinador de linha no final)
-        System.out.println(args.length);
-        if(args.length>=1){
-            System.out.println(args[0]);
-        } else{
-            System.out.println("Jair Messias Bolsonaro");
+
+        LinkedList<Partida> partidas = new LinkedList<>();
+        Time flamengo = new Time("Flamengo");
+        Time vasco = new Time("Vasco");
+        Time fluminense = new Time("Fluminense");
+        Partida p1 = new Partida(flamengo, vasco);
+        partidas.add(p1);
+        Partida p2 = new Partida(flamengo, fluminense);
+        partidas.add(p2);
+        System.out.println(partidas.get(1).getTimeB().getNumeroMundiais());
+        for(Partida p : partidas)
+        {
+            System.out.print(p.getTimeA().getNome());
+            System.out.print(" x ");
+            System.out.println(p.getTimeB().getNome());
         }
     }
 }

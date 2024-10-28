@@ -1,16 +1,28 @@
-public class Partida {
-    private Time timeA, timeB;
+public class Time
+{
+    private String nome;
+    private int nMundiais;
 
-    public Partida(Time timeA, Time timeB){
-        this.timeA = timeA;
-        this.timeB = timeB;
+    public Time(String nome)
+    {
+        this.nome=nome;
+    }
+    public Time(String nome, int nMundiais)
+    {
+        this.nome=nome;
+        this.nMundiais=nMundiais;
     }
 
-    public Time getTimeB(){
-        return timeB;
+    public void incNumeroMundiais()
+    {
+        this.nMundiais++;
     }
-
-    public void setNome(String timeB){
-        this.timeB = timeB;
+    public int getNumeroMundiais()
+    {
+        return this.nMundiais;
+    }
+    public String getNome()   // getter
+    {
+        return this.nome;
     }
 }
