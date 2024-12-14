@@ -26,7 +26,27 @@ package q1;
 public class TestadorQ1 {
 
 	public static void main(String[] args) {
-		
+		Empresa e = new Empresa("EloGroup");
+
+		Departamento d1 = new Departamento("Tecnologia");
+		Setor s1 = new Setor("Web Developing");
+		Setor s2 = new Setor("Data Science");
+		Funcionario f1 = new Funcionario("João", 2000, s1);
+		Funcionario f2 = new Funcionario("Tiago", 900, s1);
+		Funcionario f3 = new Funcionario("Pedro", 1100, s2);
+
+		e.adicionaDepartamento(d1);
+		d1.adicionaSetor(s1);
+		d1.adicionaSetor(s2);
+		s1.adicionaFuncionario(f1);
+		s1.adicionaFuncionario(f2);
+		s2.adicionaFuncionario(f3);
+
+		System.out.println(e);
+
+		s1.trocaFuncionario(f2, s2);
+
+		System.out.println(e);
 	}
 
 }

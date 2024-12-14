@@ -25,7 +25,7 @@ public class TestadorQ1 {
 		jp.addTweet(new Tweet("Olá"));
 		jp.addTweet(new Tweet("Olá!!!!!"));
 
-		ub.createVerifiedUser("Fulano",new Date());
+		ub.createVerifiedUser("Fulano", new Date());
 		System.out.println(ub.porcentagemVerificados());
 		System.out.println(ub.tamanhoMedioTweets());
 
