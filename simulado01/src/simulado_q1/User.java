@@ -1,6 +1,5 @@
 package simulado_q1;
 
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -17,6 +16,6 @@ public class User {
     }
 
     public List<Tweet> getTweets() {
-        return tweets;
+        return new LinkedList<>(this.tweets);
     }
 }

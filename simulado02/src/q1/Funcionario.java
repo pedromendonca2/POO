@@ -22,4 +22,6 @@ public class Funcionario {
     public void trocaSetor(Setor s2){
         this.st = s2;
     }
+
+    
 }

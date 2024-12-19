@@ -1,37 +1,19 @@
 package q1;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Set;
 
-public class UnidadeOrganizacional {
-    private String nome;
-    private List<Funcionario> funcionarios = new LinkedList<>();
-
-    public UnidadeOrganizacional(String nome){
-        this.nome = nome;
-    }
-
-    public void adicionaFuncionario(Funcionario fcr){
-        this.funcionarios.add(fcr);
-    }
+public abstract class UnidadeOrganizacional {
 
     public double getSalarioMedio(){
-        if(funcionarios.size() == 0) return 0;
+        if(getFuncionarios().size() == 0) return 0;
 
         double soma = 0;
-
-        for(Funcionario f: funcionarios){
+        for(Funcionario f: getFuncionarios()){
             soma += f.getSlr();
         }
 
-        return soma/funcionarios.size();
+        return soma/getFuncionarios().size();
     }
 
-    public List<Funcionario> getFuncionarios(){
-        return this.funcionarios;
-    }
-
-    public String getNome() {
-        return nome;
-    }
+    public abstract Set<Funcionario> getFuncionarios();
 }
